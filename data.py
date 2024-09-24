@@ -1,2 +1,1 @@
-def toto (n):
-  pass
+print ("hjniufeiufe")
