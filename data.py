@@ -1,1 +1,3 @@
-print(jameslavictime)
+
+def toto (n):
+  pass
