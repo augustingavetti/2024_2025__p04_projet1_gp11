@@ -14,7 +14,7 @@ def init_target ():
     init_number = ask_for_the_init_number ()
     init_base = ask_for_the_init_base ()
     for elmt in init_base:
-        if init_base == [0, 1] and init_number == [0, 1]:
+        if init_base == binary and init_number == binary:
             target_base
         elif init_base == decimal and init_number == decimal:
             target_base
