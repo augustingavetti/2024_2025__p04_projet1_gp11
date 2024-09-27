@@ -1,3 +1,0 @@
-def toto (n):
-  pass
-
