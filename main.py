@@ -36,12 +36,7 @@ def init_target ():
       bin_dec_hex__to__bin_dec_hex (init_number, \
                                     init_base, \
                                     target_base)
-    if init_base=bin:
-        def hex_dec_to_bin (init_number):
-        init_number==n
-        while n>0:
-            n=n%2
-            (n//2)%2
+
 
 
 
