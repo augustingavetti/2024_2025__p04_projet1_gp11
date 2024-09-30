@@ -21,7 +21,7 @@ def init_target ():
         elif init_base == hex_valid and init_number == hex_valid:
             target_base
         else:
-            print ("Invalid input! Please enter a valid number and base.")
+            print ("Entrée invalide! Entrez une nombre et une base valide s'il vous plait")
     target_base = ask_for_the_target_base ()
     if target_base == bin_valid and target_base == dec_valid and target_base ==  hex_valid:
         hex_math
