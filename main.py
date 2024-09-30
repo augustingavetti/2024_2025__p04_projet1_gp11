@@ -14,11 +14,11 @@ def init_target ():
     init_number = ask_for_the_init_number ()
     init_base = ask_for_the_init_base ()
     for elmt in init_base:
-        if init_base == binary and init_number == binary:
+        if init_base == bin_valid and init_number == bin_valid:
             target_base
-        elif init_base == decimal and init_number == decimal:
+        elif init_base == dec_valid and init_number == dec_valid:
             target_base
-        elif init_base == binary and init_number == binary:
+        elif init_base == hex_valid and init_number == hex_valid:
             target_base
         else:
             print ("Invalid input! Please enter a valid number and base.")
