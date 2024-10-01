@@ -54,7 +54,6 @@ def init_target ():
         elif init_base == hex_valid_chars and init_number == hex_valid_chars:
             target_base
         else:
-            print ("Entrée invalide! Entrez une nombre et une base valide s'il vous plait")
     target_base = ask_for_the_target_base ()
     
     
