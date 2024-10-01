@@ -7,7 +7,7 @@ def hex_math():
 def bin_math(init_base, init_number):
     if target_base == "bin" and init_base == "dec":
         return dec_to_bin(int(init_number, 2))
-    elif tragret_base == "bin" and init_base == "hex" :
+    elif target_base == "bin" and init_base == "hex" :
         return hex_to_bin(init_number)
     else:
         raise ValueError("Invalid base")
