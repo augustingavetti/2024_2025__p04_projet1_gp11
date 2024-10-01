@@ -4,26 +4,18 @@ from main import*
 def hex_math():
     pass
 
-def bin_math(init_base, init_number):
-    if target_base == "bin" and init_base == "dec":
-        return dec_to_bin(int(init_number, 2))
-    elif target_base == "bin" and init_base == "hex" :
-        return hex_to_bin(init_number)
-    else:
-        raise ValueError("Invalid base")
+
     
     
     
-    def dec_to_bin(init_number):
-                n = init_number
-                result = ""
-                while n > 0:
-                    result = str(n % 2) + result
-                    n = n // 2
-                
-                result += "+1" if init_number % 2 == 1 else "+0"
-                
-                return result
+def dec_to_bin(init_number):
+    n = init_number
+    result = ""
+    while n > 0:
+        result = str(n % 2) + result
+        n = n // 2
+    result += "+1" if init_number % 2 == 1 else "+0"
+    return result
             
        
     def hex_to_bin(init_number):
@@ -52,4 +44,12 @@ def bin_math(init_base, init_number):
                 result += "+1" if int(hex_to_binary[last_digit], 2) % 2 == 1 else "+0"
                 
                 return result
+    
+def bin_math(init_base, init_number):
+    if target_base == "bin" and init_base == "dec":
+        return dec_to_bin(int(init_number, 2))
+    elif target_base == "bin" and init_base == "hex" :
+        return hex_to_bin(init_number)
+    else:
+        raise ValueError("Invalid base")
             
