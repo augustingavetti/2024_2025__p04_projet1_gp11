@@ -2,7 +2,7 @@ def hex_math():
     pass
 def bin_math():
     if init_base == "bin":
-        def hex_dec_to_bin(init_number):
+        def dec_to_bin(init_number):
             n = init_number
             result = ""
             while n > 0:
