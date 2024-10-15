@@ -51,3 +51,16 @@ def hex_to_dec(init_number):
     return str(int(init_number, 16))
 
 
+def dec_to_hex(init_number):
+    n = int(init_number)
+    hex_digits = "0123456789ABCDEF"
+    result = ""
+    while n > 0:
+        result = hex_digits[n % 16] + result
+        n = n // 16
+    return result if result else "0"
+
+def bin_to_hex(init_number):
+    decimal = int(init_number, 2)
+    return dec_to_hex(decimal)
+
