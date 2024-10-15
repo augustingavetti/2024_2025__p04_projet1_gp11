@@ -58,3 +58,39 @@ def init_target ():
 
 
 init_target ()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def dec_math(init_base, init_number):
+#     if init_base == "bin":
+#         return bin_to_dec(init_number)
+#     elif init_base == "hex":
+#         return hex_to_dec(init_number)
+#     else:
+#         raise ValueError("Invalid base")
+
+
+
+# def bin_math(init_base, init_number):
+#     if target_base == "bin" and init_base == "dec":
+#         return dec_to_bin(int(init_number, 2))
+#     elif target_base == "bin" and init_base == "hex" :
+#         return hex_to_bin(init_number)
+#     else:
+#         raise ValueError("Invalid base")
