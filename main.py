@@ -2,14 +2,6 @@ from data import*
 from tools import *
 
 
-def bin_dec_hex__to__bin_dec_hex (init_number, init_base, target_base):
-    pass
-    target_number = None
-    return target_number
-
-
-assert bin_dec_hex__to__bin_dec_hex ("101", 2, 10) == "5"
-
 def check_char_is_valid(char):
     return char in base_valid_chars
 
@@ -78,32 +70,16 @@ def bin_math():
     else:
         raise ValueError("Invalid base")
 
+def bin_dec_hex__to__bin_dec_hex (init_number, init_base, target_base):
+    target_number = None
+    return target_number
 
 # target_number = \
-#       bin_dec_hex__to__bin_dec_hex (init_number, \
-#                                     init_base, \
-#                                     target_base)
+#     bin_dec_hex_to_bin_dec_hex (init_number, \
+#                                 init_base, \
+#                                 target_base)
 
 
-
+assert bin_dec_hex__to__bin_dec_hex ("101", 2, 10) == "5"
 
 init_target ()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
