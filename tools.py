@@ -38,11 +38,16 @@ def hex_to_bin(init_number):
         result += "+1" if int(hex_to_binary[last_digit], 2) % 2 == 1 else "+0"
         return result
     
-def bin_math(init_base, init_number):
-    if target_base == "bin" and init_base == "dec":
-        return dec_to_bin(int(init_number, 2))
-    elif target_base == "bin" and init_base == "hex" :
-        return hex_to_bin(init_number)
-    else:
-        raise ValueError("Invalid base")
-            
+def bin_to_dec(init_number):
+    result = 0
+    power = 0
+    for digit in reversed(init_number):
+        if digit == '1':
+            result += 2 ** power
+        power += 1
+    return str(result)
+
+def hex_to_dec(init_number):
+    return str(int(init_number, 16))
+
+
