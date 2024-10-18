@@ -69,6 +69,20 @@ def bin_math():
         return hex_to_bin(init_number)
     else:
         raise ValueError("Invalid base")
+    
+
+def hex_math():
+    target_base = init_target()[2]
+    init_base = init_target()[1]
+    init_number = init_target()[0]
+    if target_base == 16 and init_base == 10:
+        return dec_to_hex(int(init_number, 10))
+    elif target_base == 16 and init_base == 2:
+        return bin_to_hex(init_number)
+    else:
+        raise ValueError("Invalid base")
+    
+
 
 def bin_dec_hex__to__bin_dec_hex (init_number, init_base, target_base):
     target_number = None
