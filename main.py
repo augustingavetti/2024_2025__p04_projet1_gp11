@@ -2,6 +2,18 @@ from data import*
 from tools import *
 
 
+# def is_a_valid_base(base):
+#     for char in base:
+#         if not check_char_is_valid(char):
+#             return False
+#     return True
+
+# def is_a_valid_number(number):
+#     for char in number:
+#         if not check_char_is_valid(char):
+#             return False
+#     return True
+
 def check_char_is_valid(char):
     return char in base_valid_chars
 
@@ -74,9 +86,6 @@ def convert_base():
             raise ValueError("Invalid target base")
     else:
         raise ValueError("Invalid initial base")
-    
-
-
 
 
 def bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base):
