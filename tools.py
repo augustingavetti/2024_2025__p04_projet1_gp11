@@ -1,13 +1,6 @@
 
 from main import*
-
-def hex_math():
-    pass
-
-
-    
-    
-    
+   
 def dec_to_bin(init_number):
     n = init_number
     result = ""
