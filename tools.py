@@ -1,4 +1,4 @@
-
+from data import*
 from main import*
    
 def dec_to_bin(init_number):
@@ -46,7 +46,7 @@ def hex_to_dec(init_number):
 
 def dec_to_hex(init_number):
     n = int(init_number)
-    hex_digits = "0123456789ABCDEF"
+    hex_digits = hex_valid_chars(n)
     result = ""
     while n > 0:
         result = hex_digits[n % 16] + result
