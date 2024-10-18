@@ -83,10 +83,11 @@ def bin_dec_hex__to__bin_dec_hex (init_number, init_base, target_base):
     target_number = None
     return target_number
 
-# target_number = \
-#     bin_dec_hex_to_bin_dec_hex (init_number, \
-#                                 init_base, \
-#                                 target_base)
+target_number = \
+    bin_dec_hex_to_bin_dec_hex (init_number, \
+                                init_base, \
+                                target_base,\
+                                target_number)
 
 
 assert bin_dec_hex__to__bin_dec_hex ("101", 2, 10) == "5"
