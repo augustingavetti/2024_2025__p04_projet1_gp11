@@ -47,41 +47,36 @@ def init_target ():
     target_base = ask_for_the_target_base ()
     return init_number, init_base, target_base
 
-def dec_math():
-    init_base = init_target()[1]
-    init_number = init_target()[0]
+
+def convert_base():
+    init_number, init_base, target_base = init_target()
+
     if init_base == 2:
-        return bin_to_dec(init_number)
+        if target_base == 10:
+            return bin_to_dec(init_number)
+        elif target_base == 16:
+            return bin_to_hex(init_number)
+        else:
+            raise ValueError("Invalid target base")
+    elif init_base == 10:
+        if target_base == 2:
+            return dec_to_bin(int(init_number, 2))
+        elif target_base == 16:
+            return dec_to_hex(int(init_number, 10))
+        else:
+            raise ValueError("Invalid target base")
     elif init_base == 16:
-        return hex_to_dec(init_number)
+        if target_base == 2:
+            return hex_to_bin(init_number)
+        elif target_base == 10:
+            return hex_to_dec(init_number)
+        else:
+            raise ValueError("Invalid target base")
     else:
-        raise ValueError("Invalid base")
-
-
-
-def bin_math():
-    target_base = init_target()[2]
-    init_base = init_target()[1]
-    init_number = init_target()[0]
-    if target_base == 2 and init_base == 10:
-        return dec_to_bin(int(init_number, 2))
-    elif target_base == 2 and init_base == 16 :
-        return hex_to_bin(init_number)
-    else:
-        raise ValueError("Invalid base")
+        raise ValueError("Invalid initial base")
     
 
-def hex_math():
-    target_base = init_target()[2]
-    init_base = init_target()[1]
-    init_number = init_target()[0]
-    if target_base == 16 and init_base == 10:
-        return dec_to_hex(int(init_number, 10))
-    elif target_base == 16 and init_base == 2:
-        return bin_to_hex(init_number)
-    else:
-        raise ValueError("Invalid base")
-    
+
 
 
 def bin_dec_hex__to__bin_dec_hex (init_number, init_base, target_base):
@@ -98,29 +93,3 @@ assert bin_dec_hex__to__bin_dec_hex ("101", 2, 10) == "5"
 
 init_target ()
 
-# def convert_base():
-    # init_number, init_base, target_base = init_target()
-
-    # if init_base == 2:
-    #     if target_base == 10:
-    #         return bin_to_dec(init_number)
-    #     elif target_base == 16:
-    #         return bin_to_hex(init_number)
-    #     else:
-    #         raise ValueError("Invalid target base")
-    # elif init_base == 10:
-    #     if target_base == 2:
-    #         return dec_to_bin(int(init_number, 2))
-    #     elif target_base == 16:
-    #         return dec_to_hex(int(init_number, 10))
-    #     else:
-    #         raise ValueError("Invalid target base")
-    # elif init_base == 16:
-    #     if target_base == 2:
-    #         return hex_to_bin(init_number)
-    #     elif target_base == 10:
-    #         return hex_to_dec(init_number)
-    #     else:
-    #         raise ValueError("Invalid target base")
-    # else:
-    #     raise ValueError("Invalid initial base")
