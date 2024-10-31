@@ -1,5 +1,5 @@
 from data import*
-from tools import *
+from tools import*
 
 # def is_a_valid_base(base):
 #     for char in base:
@@ -94,5 +94,3 @@ def end():
     init_number, init_base, target_base = init_target()
     result = bin_dec_hex_to_bin_dec_hex(result)
     bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base, result)
-
-init_target ()
