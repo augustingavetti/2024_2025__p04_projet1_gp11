@@ -1,7 +1,6 @@
 from data import*
 from tools import *
 
-
 # def is_a_valid_base(base):
 #     for char in base:
 #         if not check_char_is_valid(char):
@@ -87,16 +86,13 @@ def convert_base():
     else:
         raise ValueError("Invalid initial base")
 
+def bin_dec_hex_to_bin_dec_hex():
+    result = dec_to_hex(result) or bin_to_dec(result) or hex_to_dec(result) or hex_to_bin(result)
+    return result
 
-def bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base):
-    target_number = None
-    return target_number
-
-init_number, init_base, target_base = init_target()
-target_number = bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base)
-
-
-assert bin_dec_hex_to_bin_dec_hex ("101", 2, 10) == "5"
+def end():
+    init_number, init_base, target_base = init_target()
+    result = bin_dec_hex_to_bin_dec_hex(result)
+    bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base, result)
 
 init_target ()
-
