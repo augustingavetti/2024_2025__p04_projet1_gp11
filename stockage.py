@@ -43,3 +43,16 @@
 #                                 init_base, \
 #                                 target_base,\
 #                                 target_number)
+
+
+# def is_a_valid_base(base):
+#     for char in base:
+#         if not check_char_is_valid(char):
+#             return False
+#     return True
+
+# def is_a_valid_number(number):
+#     for char in number:
+#         if not check_char_is_valid(char):
+#             return False
+#     return True

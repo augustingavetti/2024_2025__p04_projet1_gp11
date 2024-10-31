@@ -1,18 +1,6 @@
 from data import*
 from tools import*
 
-# def is_a_valid_base(base):
-#     for char in base:
-#         if not check_char_is_valid(char):
-#             return False
-#     return True
-
-# def is_a_valid_number(number):
-#     for char in number:
-#         if not check_char_is_valid(char):
-#             return False
-#     return True
-
 def check_char_is_valid(char):
     return char in base_valid_chars
 
@@ -59,32 +47,23 @@ def init_target ():
     return init_number, init_base, target_base
 
 
-def convert_base():
-    init_number, init_base, target_base = init_target()
-
+def convert_base(init_number, init_base, target_base):
     if init_base == 2:
         if target_base == 10:
             return bin_to_dec(init_number)
         elif target_base == 16:
             return bin_to_hex(init_number)
-        else:
-            raise ValueError("Invalid target base")
     elif init_base == 10:
         if target_base == 2:
-            return dec_to_bin(int(init_number, 2))
+            return dec_to_bin(int(init_number))
         elif target_base == 16:
-            return dec_to_hex(int(init_number, 10))
-        else:
-            raise ValueError("Invalid target base")
+            return dec_to_hex(int(init_number))
     elif init_base == 16:
         if target_base == 2:
             return hex_to_bin(init_number)
         elif target_base == 10:
             return hex_to_dec(init_number)
-        else:
-            raise ValueError("Invalid target base")
-    else:
-        raise ValueError("Invalid initial base")
+    raise ValueError(f"Conversion from base {init_base} to base {target_base} is not supported")
 
 def bin_dec_hex_to_bin_dec_hex():
     result = dec_to_hex(result) or bin_to_dec(result) or hex_to_dec(result) or hex_to_bin(result)
@@ -92,5 +71,7 @@ def bin_dec_hex_to_bin_dec_hex():
 
 def end():
     init_number, init_base, target_base = init_target()
-    result = bin_dec_hex_to_bin_dec_hex(result)
-    bin_dec_hex_to_bin_dec_hex(init_number, init_base, target_base, result)
+    init_base = int(init_base)
+    target_base = int(target_base)
+    result = convert_base(init_number, init_base, target_base)
+    print(f"{init_number} in base {init_base} is equal to {result} in base {target_base}")
