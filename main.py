@@ -1,50 +1,34 @@
-from data import*
-from tools import*
+from data import *
+from tools import *
 
-def check_char_is_valid(char):
-    return char in base_valid_chars
+nombre = input(ask_for_init_number_text)
+base = input(ask_for_init_base_text)
+target = input(ask_for_target_base_text)
 
-def is_a_valid_base(base):
-    i = 0
-    while is_valid_char:
-        is_valid_char = check_char_is_valid (base [i])
-        i = i + 1
-    return is_valid_char
+def check_base(base):
+    if base in ["2", "10", "16"]:
+        return int(base)
+    else:
+        print(ask_again_for_init_base_text)
+        return None
 
-def ask_for_init_base():
-    init_base = input(ask_for_init_base_text)
-    while not (is_a_valid_base (init_base)):
-        init_base = input(ask_again_for_init_base_text)
-    return  init_base
+def is_valid_number(nombre, base):
+    if base == 2:
+        valid_chars = '01'
+    elif base == 10:
+        valid_chars = '0123456789'
+    elif base == 16:
+        valid_chars = '0123456789ABCDEFabcdef'
+    else:
+        return False
+    return all(char in valid_chars for char in nombre)
 
-def ask_for_the_target_base():
-    init_target = input(ask_for_target_base_text)
-    while not (is_a_valid_base (init_target)):
-        init_target = input(ask_again_for_target_base_text)
-    return  init_target
-
-def check_char_is_valid(char):
-    return char in hex_valid_chars
-
-def is_a_valid_number(number):
-    i = 0
-    while is_valid_char:
-        is_valid_char = check_char_is_valid (number [i])
-        i = i + 1
-    return is_valid_char
-
-def ask_for_init_number():
-    init_number = input(ask_for_init_number_text)
-    while not (is_a_valid_number (init_number)):
-        init_number = input(ask_again_for_init_number_text)
-    return  init_number
-
-
-def init_target ():
-    init_number = ask_for_init_number ()
-    init_base = ask_for_init_base ()
-    target_base = ask_for_the_target_base ()
-    return init_number, init_base, target_base
+def check_target(target):
+    if target in ["2", "10", "16"]:
+        return int(target)
+    else:
+        print(ask_again_for_target_base_text)
+        return None
 
 
 def convert_base(init_number, init_base, target_base):
@@ -65,13 +49,16 @@ def convert_base(init_number, init_base, target_base):
             return hex_to_dec(init_number)
     raise ValueError(f"Conversion from base {init_base} to base {target_base} is not supported")
 
-def bin_dec_hex_to_bin_dec_hex():
-    result = dec_to_hex(result) or bin_to_dec(result) or hex_to_dec(result) or hex_to_bin(result)
-    return result
-
 def end():
-    init_number, init_base, target_base = init_target()
-    init_base = int(init_base)
-    target_base = int(target_base)
-    result = convert_base(init_number, init_base, target_base)
-    print(f"{init_number} in base {init_base} is equal to {result} in base {target_base}")
+    init_base = check_base(base)
+    target_base = check_target(target)
+    
+    if init_base is None or target_base is None:
+        return
+    
+    if not is_valid_number(nombre, init_base):
+        print(ask_again_for_init_number_text)
+        return
+    
+    result = convert_base(nombre, init_base, target_base)
+    print(f"{nombre} in base {init_base} is equal to {result} in base {target_base}")
