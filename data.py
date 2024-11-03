@@ -13,6 +13,5 @@ ask_for_init_number_text = "Enter the number to convert: "
 ask_again_for_init_number_text = "Invalid number for the given base. Please try again: "
 ask_for_target_base_text = "Enter the target base (2, 10, or 16): "
 ask_again_for_target_base_text = "Invalid base. Please enter 2, 10, or 16: "
-ask_again_for_all_input_text = "Invalid input. Please try again."
 
 # quit_or continue ?? countinuer ou arreterz
