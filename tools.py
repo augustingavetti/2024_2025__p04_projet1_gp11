@@ -1,6 +1,6 @@
 from data import*
 from main import*
-
+   
 def dec_to_bin(init_number):
     n = init_number
     result = ""
@@ -9,8 +9,8 @@ def dec_to_bin(init_number):
         n = n // 2
     result += "+1" if init_number % 2 == 1 else "+0"
     return result
-
-
+            
+       
 def hex_to_bin(init_number):
     hex_to_binary= {
     '0': '0000', '1': '0001', '2': '0010', '3': '0011',
@@ -30,7 +30,7 @@ def hex_to_bin(init_number):
         last_digit = init_number[-1].upper()
         result += "+1" if int(hex_to_binary[last_digit], 2) % 2 == 1 else "+0"
         return result
-
+    
 def bin_to_dec(init_number):
     result = 0
     power = 0
