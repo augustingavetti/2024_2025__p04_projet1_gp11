@@ -28,10 +28,6 @@ def check_target(target):
         return None
 
 def get_user_input():
-    """
-    Asks the user for the number, initial base, and target base.
-    Ensures the input is valid.
-    """
     while True:
         nombre = input(ask_for_init_number_text)
         init_base = input(ask_for_init_base_text)
@@ -43,10 +39,6 @@ def get_user_input():
             print(ask_again_for_all_input_text)
 
 def convert_base(init_number, init_base, target_base):
-    """
-    Converts a number from one base to another.
-    Supports binary, decimal, and hexadecimal bases.
-    """
     if init_base == target_base:
         return init_number  
 
@@ -69,9 +61,6 @@ def convert_base(init_number, init_base, target_base):
 
 
 def end():
-    """
-    Main function that handles the conversion process.
-    """
     nombre, init_base, target_base = get_user_input()
     result = convert_base(nombre, init_base, target_base)
     print(f"{nombre} in base {init_base} is equal to {result} in base {target_base}")
