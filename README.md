@@ -20,7 +20,7 @@ Convertir des nombres hexadécimaux (base 16) en binaires (base 2) et en décima
 
 Interface utilisateur interactive :
 
-Le programme guide l'utilisateur à travers un processus étape par étape pour entrer les valeurs nécessaires à la conversion.
+Le programme guide l'utilisateur à travers le processus étape par étape pour entrer les valeurs nécessaires à la conversion.
 
 
 Validation des entrées utilisateur :
@@ -82,7 +82,7 @@ Licence
 Ce projet est sous licence libre. Vous êtes libre de l'utiliser, de le modifier et de le distribuer, tant que vous respectez les termes de la licence.
 
 Remerciements
-Nous tenons à remercier tous ceux qui ont contribué à ce projet, ainsi que les ressources en ligne qui ont facilité notre apprentissage et notre développement.
+Nous tenons à remercier les créateurs des ressources en ligne qui ont facilité notre apprentissage et notre développement.
 
 Contact
 Pour toute question ou suggestion, n'hésitez pas à nous contacter via notre dépôt GitHub ou par e-mail.
