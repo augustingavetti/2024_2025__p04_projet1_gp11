@@ -1,6 +1,11 @@
 from data import *
 from tools import *
 
+
+'''
+Cette fonction vérifie si la base entrée est valide (2, 10 ou 16).
+Elle retourne la base sous forme d'entier si elle est valide, sinon None.
+'''
 def check_base(base):
     if base in ["2", "10", "16"]:
         return int(base)
@@ -8,6 +13,11 @@ def check_base(base):
         print(ask_again_for_init_base_text)
         return None
 
+
+'''
+Cette fonction vérifie si le nombre entré est valide pour la base spécifiée.
+Elle retourne True si le nombre est valide, False sinon.
+'''
 def is_valid_number(nombre, base):
     if base == 2:
         valid_chars = '01'
@@ -19,13 +29,23 @@ def is_valid_number(nombre, base):
         return False
     return all(char in valid_chars for char in nombre)
 
+
+'''
+Cette fonction vérifie si la base cible entrée est valide (2, 10 ou 16).
+Elle retourne la base sous forme d'entier si elle est valide, sinon None.
+'''
 def check_target(target):
     if target in ["2", "10", "16"]:
         return int(target)
     else:
         print(ask_again_for_target_base_text)
         return None
+    
 
+'''
+Cette fonction effectue la conversion du nombre entre les bases spécifiées.
+Elle utilise les fonctions appropriées de conversion en fonction des bases d'entrée et de sortie.
+'''
 def convert_base(init_number, init_base, target_base):
     if init_base == 2:
         if target_base == 10:
@@ -44,6 +64,12 @@ def convert_base(init_number, init_base, target_base):
             return hex_to_dec(init_number)
     raise ValueError(f"Conversion from base {init_base} to base {target_base} is not supported")
 
+
+'''
+La fonction principale qui gère le flux du programme.
+Elle demande à l'utilisateur les entrées nécessaires, effectue la conversion et affiche le résultat.
+Elle permet également à l'utilisateur de continuer à faire des conversions ou de quitter le programme.
+'''
 def main():
     while True:
         nombre = input(ask_for_init_number_text)
@@ -67,5 +93,10 @@ def main():
         if continuer != 'oui':
             break
 
+
+'''
+Ce bloc vérifie si le script est exécuté directement (et non importé comme module).
+Si c'est le cas, il appelle la fonction main() pour démarrer le programme.
+'''
 if __name__ == "__main__":
     main()
