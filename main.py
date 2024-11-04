@@ -1,6 +1,7 @@
 from data import *
 from tools import *
-
+import tkinter as tk
+from gui import ConvertisseurGUI  # Import de la classe GUI
 
 '''
 Cette fonction vérifie si la base entrée est valide (2, 10 ou 16).
@@ -12,7 +13,6 @@ def check_base(base):
     else:
         print(ask_again_for_init_base_text)
         return None
-
 
 '''
 Cette fonction vérifie si le nombre entré est valide pour la base spécifiée.
@@ -29,7 +29,6 @@ def is_valid_number(nombre, base):
         return False
     return all(char in valid_chars for char in nombre)
 
-
 '''
 Cette fonction vérifie si la base cible entrée est valide (2, 10 ou 16).
 Elle retourne la base sous forme d'entier si elle est valide, sinon None.
@@ -40,7 +39,6 @@ def check_target(target):
     else:
         print(ask_again_for_target_base_text)
         return None
-
 
 '''
 Cette fonction effectue la conversion du nombre entre les bases spécifiées.
@@ -64,17 +62,16 @@ def convert_base(init_number, init_base, target_base):
             return hex_to_dec(init_number)
     raise ValueError(f"Conversion from base {init_base} to base {target_base} is not supported")
 
-
 '''
-La fonction principale qui gère le flux du programme.
+Cette fonction gère le mode console du programme.
 Elle demande à l'utilisateur les entrées nécessaires, effectue la conversion et affiche le résultat.
 Elle permet également à l'utilisateur de continuer à faire des conversions ou de quitter le programme.
 '''
-def main():
+def console_mode():
     while True:
-        nombre = input (ask_for_init_number_text)
-        base = input (ask_for_init_base_text)
-        target = input (ask_for_target_base_text)
+        nombre = input(ask_for_init_number_text)
+        base = input(ask_for_init_base_text)
+        target = input(ask_for_target_base_text)
 
         init_base = check_base(base)
         target_base = check_target(target)
@@ -93,6 +90,31 @@ def main():
         if continuer != 'oui':
             break
 
+'''
+Cette fonction lance l'interface graphique du programme.
+'''
+def gui_mode():
+    root = tk.Tk()
+    app = ConvertisseurGUI(root)
+    root.mainloop()
+
+'''
+La fonction principale qui gère le flux du programme.
+Elle permet à l'utilisateur de choisir entre le mode console et le mode interface graphique.
+'''
+def main():
+    print("Choisissez le mode d'utilisation:")
+    print("1. Mode console")
+    print("2. Mode interface graphique")
+    
+    choice = input("Votre choix (1 ou 2): ")
+    
+    if choice == "1":
+        console_mode()
+    elif choice == "2":
+        gui_mode()
+    else:
+        print("Choix invalide. Le programme va se terminer.")
 
 '''
 Ce bloc vérifie si le script est exécuté directement (et non importé comme module).
