@@ -20,11 +20,11 @@ Elle retourne True si le nombre est valide, False sinon.
 '''
 def is_valid_number(nombre, base):
     if base == 2:
-        valid_chars = '01'
+        valid_chars = bin_valid_chars
     elif base == 10:
-        valid_chars = '0123456789'
+        valid_chars = dec_valid_chars
     elif base == 16:
-        valid_chars = '0123456789ABCDEFabcdef'
+        valid_chars = hex_valid_chars
     else:
         return False
     return all(char in valid_chars for char in nombre)
@@ -40,7 +40,7 @@ def check_target(target):
     else:
         print(ask_again_for_target_base_text)
         return None
-    
+
 
 '''
 Cette fonction effectue la conversion du nombre entre les bases spécifiées.
@@ -72,9 +72,9 @@ Elle permet également à l'utilisateur de continuer à faire des conversions ou
 '''
 def main():
     while True:
-        nombre = input(ask_for_init_number_text)
-        base = input(ask_for_init_base_text)
-        target = input(ask_for_target_base_text)
+        nombre = input (ask_for_init_number_text)
+        base = input (ask_for_init_base_text)
+        target = input (ask_for_target_base_text)
 
         init_base = check_base(base)
         target_base = check_target(target)
