@@ -61,9 +61,8 @@ def main():
             continue
         
         result = convert_base(nombre, init_base, target_base)
-        print(f"{nombre} in base {init_base} is equal to {result} in base {target_base}")
+        print(f"{nombre} en base {init_base} est égale à {result} en base {target_base}")
         
-        # Demande à l'utilisateur s'il veut continuer
         continuer = input("Voulez-vous convertir un autre nombre ? (oui/non): ").lower()
         if continuer != 'oui':
             break
