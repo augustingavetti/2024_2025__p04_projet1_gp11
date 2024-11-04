@@ -21,7 +21,7 @@ Convertir des nombres hexadécimaux (base 16) en binaires (base 2) et en décima
 Interface utilisateur interactive :
 
 Le programme guide l'utilisateur à travers un processus étape par étape pour entrer les valeurs nécessaires à la conversion.
-Des messages d'erreur clairs et informatifs sont fournis en cas d'entrées invalides.
+
 
 Validation des entrées utilisateur :
 
@@ -39,8 +39,7 @@ Naviguez vers le dossier du projet : Accédez au répertoire du projet cloné :
 cd 2024_2025__p04_projet1_gp11
 
 
-Exécutez le programme : Assurez-vous d'avoir Python installé sur votre machine. Ensuite, lancez le programme avec la commande :
-python main.py
+Conditions d'exécution : Assurez-vous d'avoir Python installé sur votre machine.
 
 Utilisation
 Une fois le programme lancé, suivez les étapes ci-dessous pour effectuer une conversion :
