@@ -45,22 +45,28 @@ def convert_base(init_number, init_base, target_base):
     raise ValueError(f"Conversion from base {init_base} to base {target_base} is not supported")
 
 def main():
-    nombre = input(ask_for_init_number_text)
-    base = input(ask_for_init_base_text)
-    target = input(ask_for_target_base_text)
+    while True:
+        nombre = input(ask_for_init_number_text)
+        base = input(ask_for_init_base_text)
+        target = input(ask_for_target_base_text)
 
-    init_base = check_base(base)
-    target_base = check_target(target)
-    
-    if init_base is None or target_base is None:
-        return
-    
-    if not is_valid_number(nombre, init_base):
-        print(ask_again_for_init_number_text)
-        return
-    
-    result = convert_base(nombre, init_base, target_base)
-    print(f"{nombre} in base {init_base} is equal to {result} in base {target_base}")
+        init_base = check_base(base)
+        target_base = check_target(target)
+        
+        if init_base is None or target_base is None:
+            continue
+        
+        if not is_valid_number(nombre, init_base):
+            print(ask_again_for_init_number_text)
+            continue
+        
+        result = convert_base(nombre, init_base, target_base)
+        print(f"{nombre} in base {init_base} is equal to {result} in base {target_base}")
+        
+        # Demande à l'utilisateur s'il veut continuer
+        continuer = input("Voulez-vous convertir un autre nombre ? (oui/non): ").lower()
+        if continuer != 'oui':
+            break
 
 if __name__ == "__main__":
     main()
