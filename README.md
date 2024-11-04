@@ -1,9 +1,4 @@
 # 2024_2025__p04_projet1_gp11
-oici une proposition de README pour votre projet :
-
-Convertisseur de Bases Numériques
-
-
 Description
 
 Ce projet est un convertisseur de nombres entre différentes bases numériques (binaire, décimale et hexadécimale). Il permet aux utilisateurs de convertir facilement des nombres entre les bases 2, 10 et 16.
