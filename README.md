@@ -1,10 +1,10 @@
 # 2024_2025__p04_projet1_gp11
-Description
+**Description:**
 
-Ce projet est un convertisseur de nombres entre différentes bases numériques (binaire, décimale et hexadécimale). Il permet aux utilisateurs de convertir facilement des nombres entre les bases 2, 10 et 16.
+Ce projet est un convertisseur de nombres entre différentes bases numériques (''binaire, décimale et hexadécimale''). Il permet aux utilisateurs de convertir facilement des nombres entre les bases 2, 10 et 16.
 
 
-Fonctionnalités
+**Fonctionnalités:**
 
 
 Conversion entre différentes bases :
@@ -24,7 +24,7 @@ Le programme vérifie la validité des bases et des nombres fournis par l'utilis
 Les utilisateurs sont invités à réessayer en cas d'erreur.
 
 
-Installation
+**Installation:**
 
 Clonez le dépôt : Ouvrez votre terminal et exécutez la commande suivante pour cloner le dépôt :
 git clone https://github.com/votre-username/2024_2025__p04_projet1_gp11.git
@@ -43,9 +43,9 @@ Entrez le nombre à convertir : Le programme vous demandera d'entrer le nombre q
 
 Sélectionnez la base d'origine : Choisissez la base dans laquelle se trouve le nombre que vous avez entré. Les options disponibles sont :
 
-2 (binaire)
-10 (décimal)
-16 (hexadécimal)
+''2 (binaire)''
+''10 (décimal)''
+''16 (hexadécimal)''
 Sélectionnez la base cible : Indiquez la base dans laquelle vous souhaitez convertir le nombre. Les mêmes options que précédemment s'appliquent.
 
 Résultat : Le programme affichera le résultat de la conversion. Vous aurez également la possibilité de convertir un autre nombre ou de quitter le programme.
@@ -66,18 +66,18 @@ Entrée : A, Base initiale : 16, Base cible : 2
 Sortie : 1010
 
 
-Contributeurs
+**Contributeurs:**
 Ce projet a été développé par :
 Tristan Bonniere
 Wael Belhaddad
 Augustin Gavetti
 
 
-Licence
+**Licence:**
 Ce projet est sous licence libre. Vous êtes libre de l'utiliser, de le modifier et de le distribuer, tant que vous respectez les termes de la licence.
 
-Remerciements
+**Remerciements:**
 Nous tenons à remercier les créateurs des ressources en ligne qui ont facilité notre apprentissage et notre développement.
 
-Contact
+**Contact:**
 Pour toute question ou suggestion, n'hésitez pas à nous contacter via notre dépôt GitHub ou par e-mail.
