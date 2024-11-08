@@ -9,9 +9,9 @@ Ce projet est un convertisseur de nombres entre différentes bases numériques (
 
 ### Conversion entre différentes bases :
 
-Convertir des nombres binaires (base 2) en décimaux (base 10) et en hexadécimaux (base 16).
-Convertir des nombres décimaux (base 10) en binaires (base 2) et en hexadécimaux (base 16).
-Convertir des nombres hexadécimaux (base 16) en binaires (base 2) et en décimaux (base 10).
+Convertir des nombres binaires (base 2) en décimaux (base 10) et en hexadécimaux (base 16).  
+Convertir des nombres décimaux (base 10) en binaires (base 2) et en hexadécimaux (base 16).  
+Convertir des nombres hexadécimaux (base 16) en binaires (base 2) et en décimaux (base 10).  
 
 ### Interface utilisateur interactive :
 
