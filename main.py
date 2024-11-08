@@ -1,7 +1,6 @@
 from data import *
 from tools import *
-import tkinter as tk
-from gui import ConvertisseurGUI  # Import de la classe GUI
+
 
 '''
 Cette fonction vérifie si la base entrée est valide (2, 10 ou 16).
@@ -90,35 +89,6 @@ def console_mode():
         if continuer != 'oui':
             break
 
-'''
-Cette fonction lance l'interface graphique du programme.
-'''
-def gui_mode():
-    root = tk.Tk()
-    app = ConvertisseurGUI(root)
-    root.mainloop()
 
-'''
-La fonction principale qui gère le flux du programme.
-Elle permet à l'utilisateur de choisir entre le mode console et le mode interface graphique.
-'''
-def main():
-    print("Choisissez le mode d'utilisation:")
-    print("1. Mode console")
-    print("2. Mode interface graphique")
-    
-    choice = input("Votre choix (1 ou 2): ")
-    
-    if choice == "1":
-        console_mode()
-    elif choice == "2":
-        gui_mode()
-    else:
-        print("Choix invalide. Le programme va se terminer.")
-
-'''
-Ce bloc vérifie si le script est exécuté directement (et non importé comme module).
-Si c'est le cas, il appelle la fonction main() pour démarrer le programme.
-'''
 if __name__ == "__main__":
-    main()
+    console_mode()
