@@ -49,16 +49,18 @@ Résultat : Le programme affichera le résultat de la conversion. Vous aurez ég
 
 Convertir le nombre 1010 (binaire) en décimal :
 
-Entrée : 1010, Base initiale : 2, Base cible : 10
-Sortie : 10
+Entrée : 1010, Base initiale : 2, Base cible : 10  
+Sortie : 10  
+
 Convertir le nombre 10 (décimal) en hexadécimal :
 
-Entrée : 10, Base initiale : 10, Base cible : 16
-Sortie : A
+Entrée : 10, Base initiale : 10, Base cible : 16  
+Sortie : A  
+
 Convertir le nombre A (hexadécimal) en binaire :
 
-Entrée : A, Base initiale : 16, Base cible : 2
-Sortie : 1010
+Entrée : A, Base initiale : 16, Base cible : 2  
+Sortie : 1010  
 
 
 ### Contributeurs:
@@ -71,7 +73,6 @@ Augustin Gavetti
 ### Licence:
 
 Ce projet est sous licence libre. Vous êtes libre de l'utiliser, de le modifier et de le distribuer, tant que vous respectez les termes de la licence.
-https://www.canva.com/design/DAGT6r1CBo4/jUDs7b4jyMP_uWt3p5_3Tg/view?utm_content=DAGT6r1CBo4&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
 ### Remerciements:
 
