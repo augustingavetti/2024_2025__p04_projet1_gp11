@@ -68,9 +68,14 @@ Elle permet également à l'utilisateur de continuer à faire des conversions ou
 '''
 def console_mode():
     while True:
-        nombre = input(ask_for_init_number_text)
-        base = input(ask_for_init_base_text)
-        target = input(ask_for_target_base_text)
+        nombre = input(ask_for_init_number_text).strip()
+        base = input(ask_for_init_base_text).strip()
+        target = input(ask_for_target_base_text).strip()
+
+        # Vérification des entrées vides
+        if not nombre or not base or not target:
+            print("Entrée invalide. Veuillez remplir tous les champs.")
+            continue
 
         init_base = check_base(base)
         target_base = check_target(target)
