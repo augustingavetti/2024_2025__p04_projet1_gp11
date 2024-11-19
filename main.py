@@ -82,13 +82,16 @@ def console_mode():
             print(ask_again_for_init_number_text)
             continue
         
-        result = convert_base(nombre, init_base, target_base)
-        print(f"{nombre} en base {init_base} est égale à {result} en base {target_base}")
+        # Si la base initiale et la base cible sont identiques, on affiche le nombre tel quel
+        if init_base == target_base:
+            print(f"{nombre} en base {init_base} est égale à {nombre} en base {target_base}")
+        else:
+            result = convert_base(nombre, init_base, target_base)
+            print(f"{nombre} en base {init_base} est égale à {result} en base {target_base}")
         
         continuer = input("Voulez-vous convertir un autre nombre ? (oui/non): ").lower()
         if continuer != 'oui':
             break
-
 
 if __name__ == "__main__":
     console_mode()
